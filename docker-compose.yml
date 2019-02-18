@@ -1,0 +1,32 @@
+version: '3.5'
+
+services:
+  app:
+    container_name: php7-nginx
+    build: .
+    ports:
+      - 8080:80
+    links:
+      - database:database-host
+    volumes:
+      - '.:/data/www'
+  database:
+    container_name: php7-nginx-mysql
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+      MYSQL_DATABASE: "${MYSQL_DATABASE_NAME}"
+
+    networks:
+      - local
+
+volumes:
+  mysql-data:
+
+networks:
+  local:
+
