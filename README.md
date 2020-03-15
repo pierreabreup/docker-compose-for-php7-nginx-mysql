@@ -2,13 +2,13 @@
 
 This project is a PHP 7 docker environment with Mysql and Nginx instance. In addition, the docker environment install globally PHPunit 7.1 and Composer(https://getcomposer.org/)
 
-# Why use it?
+# Why should you use it?
 
-First of all, it is helpful to run react and installs dependencies avoiding conflicts with other php projects. The second reason, it is to make your local machine clean
+First of all, it is helpful to run php and installs dependencies avoiding conflicts with other php projects. The second reason, it is to make your local machine clean
 
-# How to use?
+# How to use it?
 
-After you clone this project, follow the steps:
+After you've clone this project, follow the steps:
 - open a terminal session in your terminal tool (Iterm, Terminal, Putty)
 - go to folder where you've clone the project (Ex.: ```cd docker-compose-for-php7-nginx-mysql```)
 - type the command: ```make run```
